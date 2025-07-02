@@ -4,7 +4,7 @@ import { AuthProvider } from './context/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
 import Login from './components/Auth/Login';
 import Signup from './components/Auth/Signup';
-import Dashboard from './components/Dashboard/Dashboard';
+import MainDashboard from "./components/Dashboard/MainDashboard";
 import './App.css';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard/*" element={
             <PrivateRoute>
-              <Dashboard />
+              <MainDashboard />
             </PrivateRoute>
           } />
           <Route path="/" element={<Navigate to="/login" />} />
